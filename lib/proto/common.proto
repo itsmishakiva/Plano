@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package ru.plano;
+
+option java_multiple_files = true;
+option java_package = "ru.plano.lib";
+option java_outer_classname = "CommonProto";
+
+
+message MessageReply {
+  string message = 1;
+}
+
+enum Priority {
+    LOW = 0;
+    MEDIUM = 1;
+    HIGH = 2;
+    URGENT = 3;
+    NONE = 4;
+}
+
+enum Status {
+    BACKLOG = 0;
+    UNSTARTED = 1;
+    STARTED = 2;
+    COMPLETED = 3;
+    CANCELED = 4;
+    REVIEW = 5;
+}
